@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(){
-	int a, b, rmd;
+	int a, b, varA, varB, rmd;
 	;
 	do{
 	printf("nhap so nguyen duong thu nhat: ");
@@ -18,12 +18,15 @@ int main(){
 	}
 	}while(b<=0);
 	
-	while(b!=0){
-		rmd=a%b;
-		a=b;
-		b=rmd; 
+	varA=a;
+	varB=b;
+	
+	while(varB!=0){
+		rmd=varA%varB;
+		varA=varB;
+		varB=rmd; 
 	}	 
-	printf("uoc chung lon nhat cua %d va %d la: %d\n",a, b, rmd);
+	printf("uoc chung lon nhat cua %d va %d la: %d\n",a, b, varA);
 	
 	return 0;
 }
